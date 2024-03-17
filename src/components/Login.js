@@ -1,8 +1,21 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
+import { checkValidData } from "../utils/validation";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+
+  const [errorMessage, setErrorMessage] = useState(null);
+  
+  const email = useRef(null);
+  const password = useRef(null);
+  const name = useRef(null);
+
+  const handleButtonClick = () => {
+   //Validate the form
+    const message = checkValidData(email.current.value, password.current.value, name.current.value);
+    setErrorMessage(message);
+  };
 
   const toggleSignIn = () => {
     setIsSignInForm(!isSignInForm);
@@ -18,43 +31,39 @@ const Login = () => {
         />
       </div>
 
-      <form className="absolute w-3/12 p-12 my-52 bg-black mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg">
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="absolute w-3/12 p-12 my-52 bg-black mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg"
+      >
         <h1 className="pb-3 text-3xl font-bold">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
 
         {!isSignInForm && (
           <input
+          ref={name}
             type="text"
             placeholder="First Name"
             className="my-2 p-3 border border-solid border-black w-full rounded-sm bg-gray-500"
           />
         )}
-        {!isSignInForm && (
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="my-2 p-3 border border-solid border-black w-full rounded-sm bg-gray-500"
-          />
-        )}
-        {!isSignInForm && (
-          <input
-            type="text"
-            placeholder="User Name"
-            className="my-2 p-3 border border-solid border-black w-full rounded-sm bg-gray-500"
-          />
-        )}
         <input
+          ref={email}
           type="text"
           placeholder="Email or phone number"
           className="my-2 p-3 border border-solid border-black w-full rounded-sm bg-gray-500"
         />
         <input
+          ref={password}
           type="password"
           placeholder="Password"
           className="my-2 p-3 border border-solid border-black w-full rounded-sm bg-gray-500"
         />
-        <button className="my-6 pt-2 pb-2 border border-solid border-black bg-red-700 w-full rounded-lg">
+        <p className="text-red-500 font-bold py-3">{errorMessage}</p>
+        <button
+          className="my-6 pt-2 pb-2 border border-solid border-black bg-red-700 w-full rounded-lg"
+          onClick={handleButtonClick}
+        >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
         <p className="cursor-pointer" onClick={toggleSignIn}>

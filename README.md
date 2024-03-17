@@ -1,6 +1,11 @@
 # Netflix GPT
     - Create react app
     - Configure tailwind css
+    - Form validation
+    - useRef Hook
+    - Name validation Done
+    - Email validation Done
+    - PAssword validation Done
 
 # Features 
     - Sign In/ Sign Up page
