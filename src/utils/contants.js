@@ -3,4 +3,12 @@ export const BACKGROUND_URL =
 export const LOGO_URL =
   "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 export const PROFILE_URL =
-    "https://avatars.githubusercontent.com/u/137313559?v=4"
+  "https://avatars.githubusercontent.com/u/137313559?v=4";
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYWIzMWZjOTkzN2IyNjE2NDlkODg2ZjFlZjhjYjI2ZSIsInN1YiI6IjY1ZmE5MWY2Y2Y2MmNkMDE2MzU1NjY4OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.L2A1tiTkohP65W9ObrIOCh_iEWZo5aihTsXRc__NrsM",
+  },
+};
