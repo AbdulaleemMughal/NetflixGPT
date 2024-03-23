@@ -18,6 +18,12 @@
     - embeded the youtube video 
     - make it autoplay and mute
     - tailwind class to make the main container look awesome
+    - GPT Search feature
+    - GPT Search Page
+    - GPT Search Bar
+    - (Bonus) Multi-Language Feature in our app
+    - INtegrate the GPT API's
+    - Get OPEN AI key
 
 # Features 
     - Sign In/ Sign Up page
@@ -34,4 +40,4 @@
 
     - Netflix GPT
         - Search bar
-        - Movie Suggestions
+        - Movie Suggestions 
