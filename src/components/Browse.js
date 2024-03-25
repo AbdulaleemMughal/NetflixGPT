@@ -9,6 +9,7 @@ import SecondaryContainer from "./SecondaryContainer";
 import { toggleGptSearchVeiw } from "../utils/gptSlice";
 import { SUPPORTED_LANGUAGES } from "../utils/contants";
 import { changeLanguage } from "../utils/configSlice";
+import lang from "../utils/languageConstants";
 
 const Browse = () => {
   useNowPlayingMovies();
@@ -17,6 +18,7 @@ const Browse = () => {
   useUpComingMovies();
   const dispatch = useDispatch();
   const GptSearchVeiw = useSelector((store) => store.gpt.showGptSearch);
+  const langKey = useSelector((store) => store.config.lang);
 
   const handleGptSearchClick = () => {
     //Toggle GPT Search Button
@@ -51,7 +53,7 @@ const Browse = () => {
             className="text-white py-3 px-5 mx-9 my-5 rounded-lg bg-red-600 mb-5"
             onClick={handleGptSearchClick}
           >
-            {GptSearchVeiw ? "Home" : "GPT-Search"}
+            {GptSearchVeiw ? lang[langKey].home : lang[langKey].gptSearch}
           </button>
         </div>
       </div>

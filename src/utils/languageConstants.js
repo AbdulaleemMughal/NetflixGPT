@@ -1,27 +1,63 @@
 const lang = {
     en:{
         search: "Search",
-        getSearchPlaceholder: "What would you like to watch today?"
+        getSearchPlaceholder: "What would you like to watch today?",
+        nowPlaying: "Now Playing:",
+        popular: "Popular:",
+        topRated: "Top Rated",
+        upComingMovies: "UpComing Movies",
+        home: "Home",
+        gptSearch: "GPT-Search",
     },
     urdu:{
         search: "تلاش",
-        getSearchPlaceholder: "آج آپ کیا دیکھنا چاہیں گے؟"
+        getSearchPlaceholder: "آج آپ کیا دیکھنا چاہیں گے؟",
+        nowPlaying: "ابھی چل رہا ہے:",
+        popular: "مقبول:",
+        topRated: "سب سے اوپر ریٹیڈ",
+        upComingMovies: "آنے والی فلمیں",
+        home: "گھر",
+        gptSearch: "GPT-تلاش",
     },
     spanish:{
         search: "Buscar",
-        getSearchPlaceholder: "¿Qué te gustaría ver hoy?"
+        getSearchPlaceholder: "¿Qué te gustaría ver hoy?",
+        nowPlaying: "Jugando ahora:",
+        popular: "Popular:",
+        topRated: "Los más valorados",
+        upComingMovies: "Próximas películas",
+        home: "Hogar",
+        gptSearch: "Búsqueda GPT",
     },
     chinese:{
         search: "搜尋",
-        getSearchPlaceholder: "你今天想看什麼?"
+        getSearchPlaceholder: "你今天想看什麼?",
+        nowPlaying: "正在播放:",
+        popular: "受欢迎的:",
+        topRated: "最受好评",
+        upComingMovies: "即将上映的电影",
+        home: "家",
+        gptSearch: "GPT 搜索",
     },
     hindi:{
         search: "खोज",
-        getSearchPlaceholder: "आज आप क्या देखना चाहेंगे?"
+        getSearchPlaceholder: "आज आप क्या देखना चाहेंगे?",
+        nowPlaying: "अब खेल रहे हैं:",
+        popular: "लोकप्रिय:",
+        topRated: "टॉप रेटेड:",
+        upComingMovies: "आने वाली फिल्में",
+        home: "घर",
+        gptSearch: "जीपीटी-खोज",
     },
     arabic:{
         search: "يبحث",
-        getSearchPlaceholder: "ماذا تريد أن تشاهد اليوم؟"
+        getSearchPlaceholder: "ماذا تريد أن تشاهد اليوم؟",
+        nowPlaying: "الان العب:",
+        popular: "شائع:",
+        topRated: "أعلى التقييمات",
+        upComingMovies: "الأفلام القادمة",
+        home: "بيت",
+        gptSearch:" بحث GPT",
     },
 };
 

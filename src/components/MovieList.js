@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import MovieCard from "./MovieCard";
+import { toContainElement } from "@testing-library/jest-dom/matchers";
 
 const MovieList = ({ title, movies }) => {
+
 
   return (
     <div className="p-2 py-2">

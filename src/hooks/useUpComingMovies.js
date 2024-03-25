@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS } from "../utils/contants";
 import { addUpComingMovies } from "../utils/movieSlice";
 
 const useUpComingMovies = () => {
   //Fetch data from tmdb app
   const dispatch = useDispatch();
+  // const upComingMovies = useSelector(store => store.movies.nowUpComingMovies);
 
   const getUpComingMovie = async () => {
     const data = await fetch(
@@ -20,6 +21,7 @@ const useUpComingMovies = () => {
   };
 
   useEffect(() => {
+    // !upComingMovies && getUpComingMovie();
     getUpComingMovie();
   }, []);
 };
